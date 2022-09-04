@@ -2,8 +2,10 @@ package com.diexample;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("classpath:tutorApp.properties")
 public class TutorConfig {
 
     //define bean for SubjectTutor

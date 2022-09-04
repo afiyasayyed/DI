@@ -7,11 +7,14 @@ public class MyTutorApplication {
         AnnotationConfigApplicationContext annotationConfigApplicationContext =
                 new AnnotationConfigApplicationContext(TutorConfig.class);
 
-        MyTutorService myTutorService = annotationConfigApplicationContext.getBean("tutor", MyTutorService.class);
+        MyTutor myTutorService = annotationConfigApplicationContext.getBean("tutor", MyTutor.class);
 
         System.out.println(myTutorService.getTutorService());
         System.out.println(myTutorService.getMathTutor());
         System.out.println(myTutorService.getEnglishTutor());
+        System.out.println(myTutorService.getEmail());
+        System.out.println(myTutorService.getAddress());
+        System.out.println(myTutorService.getContact());
         annotationConfigApplicationContext.close();
     }
 }
